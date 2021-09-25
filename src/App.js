@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import './Login.css';
+import './SubPage.css'
 
-function App() {
+import Header from "./components/Header";
+import Login from "./components/Login";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import NewProduct from "./components/NewProduct";
+import Best from "./components/Best";
+import Smart from "./components/Smart";
+import Sale from "./components/Sale";
+import Slide from "react-slick";
+
+
+
+import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
+
+function App(){
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className = "Apple">
+      <div className = "container">
+        <Header></Header>
+        <Route exact path = "/"><Main></Main></Route>
+        <Route exact path = "/Header"><Login></Login></Route>
+        <Route exact path = "/NewProduct"><NewProduct></NewProduct></Route>
+        <Route exact path = "/Best"><Best></Best></Route>
+        <Route exact path = "/Smart"><Smart></Smart></Route>
+        <Route exact path = "/Sale"><Sale></Sale></Route>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
+
 
 export default App;

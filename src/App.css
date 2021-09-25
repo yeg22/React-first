@@ -1,38 +1,1192 @@
-.App {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* css 초기화 */
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #333333;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*---------시작-----------*/
+#container {
+  margin: 0 auto;
+}
+
+/*header*/
+#header {
+  width: 100%;
+  height: 156px;
+  /*color: #4c4c4c;*/
+}
+#header-wrap {
+  width: 1050px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 9px 0 0;
+  position: relative;
+}
+.usermenu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 37px;
+}
+.delivery_icon {
+  height: 100%;
+  width: 121px;
+}
+.delivery_icon a img {
+  display: inline-block;
+  /*position: absolute;*/
+  /*left: -1px;*/
+  /*top: -28px;*/
+  height: 22px;
+  width: 121px;
+  border: 0;
+}
+
+.user_menu {
+  display: flex;
+  height: 37px;
+}
+.user_menu > li {
+  padding: 0 12px;
+}
+.user_menu > li:last-child {
+  padding-right: 0;
+}
+.user_menu > li > link {
+  font-size: 12px;
+  text-decoration: none;
+}
+.user_login_item > link {
+  color: #333333;
+}
+.user_join_item > link {
+  color: #5f0080;
+}
+.service_center_item > link {
+  color: #333333;
+}
+
+.bar {
+  width: 1px;
+  height: 13px;
+  background-color: #d8d8d8;
+}
+
+.service_center_item {
+  /*display: flex;*/
+  position: relative;
+}
+
+.service_center_icon {
+  width: 18px;
+  height: 18px;
+  /*background-image: url(./images/down.webp);*/
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: none;
+}
+
+.service_center_detail {
+  width: 100px;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  z-index: 50;
+}
+
+.service_center_detail > li {
+  margin-bottom: 8px;
+}
+.service_center_detail > li > link {
+  text-decoration: none;
+  font-weight: 400;
+  color: #4c4c4c;
+  font-size: 12px;
+}
+
+.service_center_detail > li:last-child {
+  margin-bottom: 0;
+}
+
+#logo {
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  /*margin: -20px auto 12px;*/
+}
+#logo > a > img {
+  display: block;
+  width: 103px;
+  height: 79px;
+  margin: -22px auto 12px;
+}
+#gnb {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+.gnb_menu {
+  display: flex;
+  height: 55px;
+  font-size: 14px;
+  color: #333333;
+}
+.gnb_menu > li {
+  font-size: 16px;
+  height: 100%;
+  font-weight: 500;
+}
+.all_category {
+  width: 168px;
+  height: 100%;
+  padding: 16px 0 0;
+  vertical-align: baseline;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.icon {
+  margin: 5px 14px 0 0;
+}
+.all_category_items {
+  display: none;
+}
+.category {
+  width: 124px;
+  text-align: center;
+  padding: 16px 0 0;
+  height: 55px;
+  vertical-align: baseline;
+  line-height: 20px;
+}
+
+.category > link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.gnb_side {
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gnb_side_search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.side_search_bar {
+  width: 242px;
+  height: 36px;
+  padding: 0 60px 0 14px;
+  border-radius: 50px;
+  background-color: #f7f7f7;
+  font-size: 12px;
+  border: none;
+  color: #666;
+  font-weight: 400;
+  border: 1px solid #f7f7f6;
+  font-family: "Noto Sans";
+}
+.btn_side_search {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+}
+.gnb_side_location {
+  width: 35px;
+  height: 35px;
+  background-image: url("https://res.kurly.com/pc/ico/2008/ico_delivery_setting.svg?ver=1");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35px 35px;
+  border: none;
+}
+.gnb_side_cart {
+  width: 35px;
+  height: 35px;
+  background-image: url("https://res.kurly.com/pc/service/common/2011/ico_cart.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 35px 35px;
+  border: none;
+}
+/*gnb_sub*/
+.gnb_sub {
+  display: hidden;
+}
+/*-----------------main--------------------------------------*/
+#main {
+  width: 100%;
+  position: relative;
+}
+
+/*--------슬라이드 section-----------------*/
+.slide {
+  width: 100%;
+  height: 370px;
+  position: relative;
+}
+
+.slide-box {
+  width: 100%;
+  height: 370px;
+}
+
+.slide-items {
+  width: 100%;
+  height: 370px;
+  overflow: hidden;
+}
+
+.slide-items li a {
+  display: block;
+  width: 100%;
+  height: 370px;
+}
+
+.slide1 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1621561009.jpg");
+}
+
+.slide2 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1631006853.jpg");
+}
+
+.slide3 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1630486852.jpg");
+}
+
+.slide4 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1631012031.jpg");
+}
+
+.slide5 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1630490938.jpg");
+}
+
+.slide6 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1630488797.jpg");
+}
+
+.slide7 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1630548666.jpg");
+}
+
+.slide8 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1628583839.jpg");
+}
+
+.slide9 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1621561009.jpg");
+}
+
+.slide10 {
+  background-image: url("https://img-cf.kurly.com/shop/data/main/1/pc_img_1583112495.jpg");
+}
+.slide-button:hover {
+  opacity: 1;
+}
+.slide-button {
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 200;
+}
+.prev-button {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  left: 0;
+  bottom: 165px;
+  background: url("https://res.kurly.com/pc/service/main/1908/ico_prev1_x1.png")
+    no-repeat 50% 50%;
+  border: none;
+}
+.next-button {
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 0;
+  bottom: 165px;
+  background: url("https://res.kurly.com/pc/service/main/1908/ico_next1_x1.png")
+    no-repeat 50% 50%;
+  border: none;
+}
+
+/*main page section_tit*/
+.section_tit {
+  width: 100%;
+  height: 146px;
+  text-align: center;
+  font-size: 28px;
+  padding: 79px 0px 35px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.section_tit2 {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  padding: 79px 0 35px 0;
+  color: #333333;
+  font-weight: 500;
+}
+.section_tit2 > a {
+  font-size: 28px;
+  color: #333333;
+  text-decoration: none;
+}
+
+.tit_sub {
+  display: block;
+  font-size: 16px;
+  color: #999999;
+  font-weight: 400;
+  padding: 10px 0 0;
+  height: 30px;
+}
+/*-----------recommendation section-----------*/
+.recommendation_section {
+  width: 100%;
+  height: 652px;
+  position: relative;
+}
+
+/*
+.rec_product_slide {
+  width: 1050px;
+  height: 506px;
+  margin: 0 auto;
+}*/
+.main_products {
+  margin: 0 auto;
+  width: 1050px;
+  height: 506px;
+  display: flex;
+  justify-content: space-between;
+}
+.main_products li {
+  width: 249px;
+  height: 100%;
+}
+.rec_products_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+
+.main_products > li > h3 {
+  margin: 12px 0 0;
+  text-decoration: none;
+  line-height: 23px;
+}
+.main_products li h3 a {
+  text-decoration: none;
+  color: #333333;
+}
+.main_product_info {
+  margin: 9px 0 0;
+}
+.main_product_info .price {
+  font-size: 16px;
+}
+.main_product_info .dc {
+  margin: 0 8px 0 0;
+  color: #fa622f;
+}
+.main_product_info .origin_price {
+  display: block;
+  margin: 5px 0 0;
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #999999;
+}
+.rec_prev {
+  position: absolute;
+  top: 275px;
+  left: 205px;
+}
+.rec_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+
+/*-----------today_sale section-------------*/
+.today_sale_section {
+  width: 100%;
+  height: 639.8px;
+  padding: 0 0 88px 0;
+}
+.today_sale_wrap {
+  width: 1050px;
+  height: 100%;
+  padding: 20px 0 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.today_sale_product_label {
+  width: 328px;
+  height: 203px;
+  padding: 11px 0 7px 10px;
+}
+.today_sale_info {
+  width: 328px;
+  height: 173px;
+  padding: 0 0 0 2px;
+}
+
+.today_sale_info > h1 {
+  color: #333333;
+  font-size: 32px;
+}
+.today_sale_i {
+  width: 326px;
+  height: 58px;
+  padding: 10px 0 0;
+  font-size: 16px;
+  color: #999999;
+}
+.today_sale_t {
+  width: 328px;
+  height: 30px;
+}
+.today_sale_t p {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0 0 10px 22px;
+  font-size: 14px;
+  color: #cccccc;
+}
+.today_sale_products {
+  display: flex;
+  justify-content: space-between;
+  width: 694px;
+}
+.today_sale_products li {
+  width: 338px;
+  height: 100%;
+}
+.today_sale_img {
+  display: block;
+  width: 338px;
+  height: 434px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/160024119365l0.jpg");
+  background-size: cover;
+}
+.today_sale_products li h3 {
+  padding: 14px 0 0 4px;
+  line-height: 23px;
+}
+.today_sale_products li h3 a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+}
+.today_sale_info_products {
+  padding: 0 0 0 4px;
+}
+.today_sale_dc {
+  font-size: 20px;
+  padding: 0 6px 0 0;
+  color: #fa622f;
+}
+.today_sale_price {
+  font-size: 20px;
+  color: #333333;
+}
+.today_sale_origin_price {
+  padding: 0 0 0 4px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+/*--------sale_section------------*/
+.sale_section {
+  width: 100%;
+  height: 684px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+}
+
+.title_arrow {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-image: url("https://res.kurly.com/pc/service/main/1908/ico_title_link_x1.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+}
+.sale_wrap {
+  margin: 0 auto;
+  width: 1050px;
+  height: 538px;
+}
+.sale_products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sale_products li {
+  width: 338px;
+}
+.sale_products_img {
+  display: block;
+  width: 338px;
+  height: 338px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/160024119365l0.jpg");
+  background-size: cover;
+}
+.sale_products_info_1 {
+  display: block;
+  width: 100%;
+  height: 27.2px;
+  margin: 17px 0 0;
+  text-align: center;
+}
+.sale_products_info_1 a {
+  color: #333333;
+  font-size: 18px;
+}
+.sale_products_info_2 {
+  display: block;
+  width: 100%;
+  height: 27.2px;
+  padding: 8px 0 0;
+  color: #999999;
+  font-size: 16px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*---------------cheap section------*/
+.cheap_section {
+  position: relative;
+}
+.cheap_products_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cheap_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*--------------banner----------*/
+.banner_1,
+.banner_2,
+.banner_3 {
+  width: 100%;
+  height: 140px;
+}
+
+.banner_img {
+  display: block;
+  margin: 0 auto;
+  width: 1050px;
+  height: 140px;
+}
+
+/*-------------md-------------*/
+.md_recommendation_section {
+  width: 100%;
+  height: 964px;
+  padding: 0 0 100px;
+  position: relative;
+}
+.category_md_wrap {
+  width: 100%;
+  height: 200px;
+}
+.category_md {
+  margin: 0 auto;
+  width: 1050px;
+  height: 200px;
+  padding: 0 0 20px;
+}
+.category_md_list {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.category_md_list li {
+  height: 60px;
+  padding: 0px 5px 20px 5px;
+}
+.category_md_list li {
+  cursor: pointer;
+  border-radius: 50px;
+  height: 40px;
+  text-align: center;
+  display: block;
+  color: #333333;
+  background-color: #f7f7f7;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 12px 20px 0 19px;
+}
+
+.category_md_list li :hover {
+  background-color: #f7f3f8;
+  color: #5f0080;
+}
+
+.category_md_list li :focus,
+.category_md_list li :active {
+  background-color: #5f0080;
+  color: #f7f3f8;
+}
+
+.md_rec_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+
+.md_rec_next {
+  position: absolute;
+  top: 475px;
+  right: 205px;
+}
+.more_link {
+  margin: 0 auto;
+  width: 516px;
+  height: 56px;
+  padding: 16px 0 0;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+  color: #333333;
+}
+.more_link a {
+  text-decoration: none;
+  color: #333333;
+}
+.btn_more_link {
+  color: #333333;
+}
+
+/*--------now_hot_section---------*/
+.now_hot_section {
+  position: relative;
+}
+.now_hot_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+.now_hot_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+
+/*--------think_section---------*/
+.think_section {
+  position: relative;
+  background-color: #f7f7f7;
+}
+.think_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+.think_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+/*--------last_sale_section---------*/
+.last_sale_section {
+  position: relative;
+}
+.last_sale_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+.last_sale_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+/*--------low_365_section---------*/
+.low_365_section {
+  position: relative;
+  background-color: #f7f7f7;
+}
+.low_365_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+.low_365_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+/*--------home_section---------*/
+.home_section {
+  position: relative;
+}
+.home_img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+  background-size: cover;
+}
+.home_next {
+  position: absolute;
+  top: 275px;
+  right: 205px;
+}
+
+/*--------recipe_section-------*/
+.recipe_section {
+  width: 100%;
+  position: relative;
+  height: 449px;
+}
+.recipe_wrap {
+  margin: 0 auto;
+  width: 1050px;
+  height: 303px;
+}
+.recipe_products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.recipe_products li {
+  width: 338px;
+  height: 100%;
+}
+.recipe_img1 {
+  display: block;
+  width: 100%;
+  height: 225px;
+  background-size: cover;
+  background-image: url("https://img-cf.kurly.com/shop/data/board/recipe/m/main_v2_02ac877dfaa1572f.jpg");
+}
+.recipe_img2 {
+  display: block;
+  width: 100%;
+  height: 225px;
+  background-size: cover;
+  background-image: url("https://img-cf.kurly.com/shop/data/board/recipe/m/main_v2_d84cc1aba13fb460.jpg");
+}
+.recipe_img3 {
+  display: block;
+  width: 100%;
+  height: 225px;
+  background-size: cover;
+  background-image: url("https://img-cf.kurly.com/shop/data/board/recipe/m/main_v2_52209e7b27906914.jpg");
+}
+.recipe_products_info {
+  display: block;
+  width: 100%;
+  padding: 12px 0 0;
+  text-align: center;
+}
+.recipe_next {
+  position: absolute;
+  top: 225px;
+  right: 205px;
+}
+
+/*------------insta_section-------*/
+.insta_section {
+  width: 100%;
+  height: 517.6px;
+  position: relative;
+}
+.insta_wrap {
+  margin: 0 auto;
+  width: 1050px;
+  height: 175px;
+}
+.insta_products {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+.insta_products li {
+  width: 100%;
+  height: 100%;
+}
+.insta_img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
+}
+.insta_more_link {
+  width: 100%;
+  height: 196.6px;
+  padding: 39px 0 100px 0;
+  text-align: center;
+}
+.insta_more_a {
+  display: block;
+  color: #999999;
+  font-size: 16px;
+  height: 28.8px;
+}
+.insta_more_id {
+  display: block;
+  color: #333333;
+  font-size: 16px;
+}
+.insta_next {
+  position: absolute;
+  top: 200px;
+  right: 205px;
+}
+
+/*footer*/
+#footer {
+  width: 100%;
+  height: 432px;
+}
+.footer_wrap {
+  width: 1050px;
+  height: 432px;
+  margin: 0 auto;
+  padding: 0px 0px 60px;
+}
+.footer_up {
+  width: 100%;
+  height: 314.4px;
+  padding: 0px 0px 20px;
+  display: flex;
+}
+.f_service_center {
+  width: 534px;
+  height: 100%;
+}
+.f_sc_tit {
+  width: 534px;
+  height: 55px;
+}
+.f_sc_tit h3 {
+  font-size: 20px;
+  padding: 29px 0 2px;
+  color: #333333;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+}
+.f_sc_call {
+  display: flex;
+  width: 100%;
+  padding: 20px 0 0;
+  /* height: 100%; */
+}
+.f_sc_kakao {
+  display: flex;
+  width: 100%;
+  padding: 16px 0 0;
+}
+.f_sc_qna {
+  display: flex;
+  width: 100%;
+  padding: 16px 0 0;
+}
+.f_sc_b_qna {
+  display: flex;
+  width: 100%;
+  padding: 16px 0 0;
+}
+.sc_call_num {
+  font-weight: 800;
+  font-size: 28px;
+  /* padding: 4px 0 0; */
+  /* border: 1px solid black; */
+  color: #333333;
+  line-height: 36px;
+  margin: 3px 16px 0 0;
+}
+.sc_call_tit {
+  width: 139.99px;
+  margin: 3px 16px 0 0;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #e3e3e3;
+  font-weight: 500;
+  text-align: center;
+  color: #333333;
+  text-decoration: none;
+  padding: 10px 0 0;
+  vertical-align: center;
+}
+.sc_call_about {
+  height: 100%;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.sc_call_about_1 {
+  line-height: 22px;
+}
+.sc_call_about_2 {
+  color: #999999;
+  font-size: 14px;
+}
+.f_company {
+  width: 516px;
+  height: 100%;
+  padding: 29px 0px 0px;
+}
+.f_c_menu {
+  display: flex;
+
+  width: 100%;
+  height: 48.19px;
+  padding: 0 0 29px;
+  font-size: 14px;
+}
+.f_c_menu > li {
+  padding: 0 16px 0 0;
+}
+.f_c_menu > li > a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+}
+
+.f_c_about {
+  width: 100%;
+  font-size: 12px;
+  color: #999999;
+  line-height: 20px;
+}
+.f_c_about > li > a {
+  text-decoration: none;
+  color: #5f0080;
+}
+
+.f_c_copy {
+  display: block;
+  color: #949296;
+  font-size: 10px;
+  padding: 16px 0 0;
+}
+
+.f_c_sns {
+  display: flex;
+  padding: 16px 0 0;
+}
+
+.f_c_sns > li > a > img {
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.footer_down {
+  width: 100%;
+  height: 57.19px;
+  padding: 19px 0px 0px;
+  display: flex;
+}
+.f_link {
+  display: flex;
+}
+.f_link > a {
+  display: block;
+  width: 267px;
+  display: flex;
+  text-decoration: none;
+}
+.f_link > a:last-of-type {
+  width: 427.99px;
+}
+.f_l_img1,
+.f_l_img2 {
+  width: 33.99px;
+  height: 33.99px;
+  margin: 0 10px 0 0;
+}
+.f_l_img3 {
+  width: 102px;
+  height: 33.99px;
+  margin: 0 10px 0 0;
+}
+
+.f_l_p {
+  font-size: 10px;
+  color: #999999;
+  padding: 1px 0 0;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  line-height: 16px;
 }
