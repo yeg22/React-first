@@ -24,9 +24,11 @@ const SlideBox = styled.div`
       
       const ImageContainer = styled.div`
       
-      height: 320px;
-      display: flex;
-    justify-content: space-between;
+        height: 320px;
+        display: flex;
+        justify-content: space-between;
+
+        
       
       `;
 
@@ -38,7 +40,6 @@ const SlideBox = styled.div`
       `;
 
       const Image = styled.img`
-      
       `;
 
       /*const items = [

@@ -14,7 +14,7 @@ function Login(){
                                 <input type = "password" placeholder = "비밀번호를 입력해주세요" />
                                 <div className = "login_check">
                                     <div className = "login_security">
-                                        <label><input type = "checkbox"></input></label>
+                                        <label><input type = "checkbox"></input>보안접속</label>
                                     </div>
                                     <div className = "login_search">
                                         <Link to = "#" className= "id_search">아이디 찾기</Link>

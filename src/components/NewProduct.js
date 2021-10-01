@@ -1,9 +1,13 @@
-import React, {Component}  from 'react';
+import React, { useState, useEffect } from 'react';
 
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import ProductList from './ProductList';
 
-const products = [
+import Pagination from './Pagination';
+import Post from './Post';
+import axios from 'axios';
+
+/*const products = [
     {
         'id' : 1,
         'image' : '#',
@@ -43,25 +47,46 @@ const products = [
         
     }
 
-]
+]*/
 
 
 function NewProduct(){
-
+    
+        const [posts, setPosts] = useState([]);
+        const [loading, setLoading] = useState(false);
+        const [currentPage, setCurrentPage] = useState(1);
+        const [postsPerPage] = useState(36);
+      
+        useEffect(() => {
+          const fetchPosts = async () => {
+            setLoading(true);
+            const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+            setPosts(res.data);
+            setLoading(false);
+          };
+      
+          fetchPosts();
+        }, []);
+      
+        // Get current posts
+        const indexOfLastPost = currentPage * postsPerPage;
+        const indexOfFirstPost = indexOfLastPost - postsPerPage;
+        const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+      
+        // Change page
+        const paginate = pageNumber => setCurrentPage(pageNumber);
 
     return(
         
         <div className = "content">
 
             <div className =  "tit_article">
-                <a href = "#">
-                    <h2>신상품</h2>
-                </a>
+                <h2>신상품</h2>
             </div>{/*<!--tit_article-->*/}
 
             <div className = "page_article">
                 <div className = "sort_menu">
-                    <span className = "count_product">총 {products.length}건</span>
+                    <span className = "count_product">총 {posts.length}건</span>
                     <ul className = "sort_select">
                         <li><a href = "#">추천순</a></li>
                         <span className = "bar2">I</span>
@@ -77,9 +102,9 @@ function NewProduct(){
                     </ul>
                 </div>{/*<!--sort_menu-->*/}
                 <div className = "list_product_wrap">
-                    <ul className = "list_product">
-            
-                        {
+                    
+
+                        {/*{ 이 js에서 위에 const products(배열로)해주고, ProductList에 props로 전달해 줄 때 했었음 (json, axios 아니라 그냥 값 전달)
                             products.map(c => {
                                 return(
                                     <ProductList
@@ -93,29 +118,23 @@ function NewProduct(){
                                     />
                                 );
                             })
-                        }
-                    </ul>
+                        }*/}
+                        <Post posts = {currentPosts} loading = {loading}/>
+                        <Pagination 
+                            postsPerPage ={postsPerPage} 
+                            totalPosts={posts.length} 
+                            paginate = {paginate}>
+                        </Pagination>
                 </div>{/*<!--list_product_wrap-->*/}
             </div>{/*<!--page_article-->*/}
 
-            <div className = "page_pagination">
-                <ul className = "page_pagnination_wrap">
-                    <li className = "first"><a href = "#"></a></li>
-                    <li className = "arrow_left"><a href = "#"></a></li>
-                    <li className = "num"><a href = "#">1</a></li>
-                    <li className = "num"><a href = "#">2</a></li>
-                    <li className = "num"><a href = "#">3</a></li>
-                    <li className = "num"><a href = "#">4</a></li>
-                    <li className = "num"><a href = "#">5</a></li>
-                    <li className = "arrow_right"><a href = "#"></a></li>
-                    <li className = "last"><a href = "#"></a></li>
-                </ul>
-            </div>
+            
 
         </div> 
 
 
     );
 }
+
 
 export default NewProduct;

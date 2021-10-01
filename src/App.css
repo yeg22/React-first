@@ -133,6 +133,11 @@ table {
   border-spacing: 0;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 /*---------시작-----------*/
 #container {
   margin: 0 auto;
@@ -175,24 +180,32 @@ table {
   display: flex;
   height: 37px;
 }
-.user_menu > li {
+.user_menu li {
   padding: 0 12px;
 }
-.user_menu > li:last-child {
+.user_menu li:last-child {
   padding-right: 0;
 }
-.user_menu > li > link {
+.loginlink {
   font-size: 12px;
+  font-weight: 400;
+  color: #333333;
   text-decoration: none;
+  letter-spacing: -0.3px;
 }
-.user_login_item > link {
-  color: #333333;
-}
-.user_join_item > link {
+.joinlink {
+  font-size: 12px;
+  font-weight: 400;
   color: #5f0080;
+  text-decoration: none;
+  letter-spacing: -0.3px;
 }
-.service_center_item > link {
+.sclink {
+  font-size: 12px;
+  font-weight: 400;
   color: #333333;
+  text-decoration: none;
+  letter-spacing: -0.3px;
 }
 
 .bar {
@@ -216,8 +229,8 @@ table {
 }
 
 .service_center_detail {
-  width: 100px;
-  padding: 8px;
+  display: hidden;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ddd;
   position: absolute;
@@ -226,17 +239,20 @@ table {
   z-index: 50;
 }
 
-.service_center_detail > li {
+.service_center_detail li {
+  display: hidden;
   margin-bottom: 8px;
 }
-.service_center_detail > li > link {
+
+.scd {
+  display: hidden;
   text-decoration: none;
   font-weight: 400;
   color: #4c4c4c;
   font-size: 12px;
 }
 
-.service_center_detail > li:last-child {
+.service_center_detail li:last-child {
   margin-bottom: 0;
 }
 
@@ -269,11 +285,7 @@ table {
   font-size: 14px;
   color: #333333;
 }
-.gnb_menu > li {
-  font-size: 16px;
-  height: 100%;
-  font-weight: 500;
-}
+
 .all_category {
   width: 168px;
   height: 100%;
@@ -281,6 +293,13 @@ table {
   vertical-align: baseline;
   line-height: 20px;
   overflow: hidden;
+  font-size: 16px;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+}
+.all_category:hover {
+  color: #5f0080;
+  cursor: pointer;
 }
 
 .icon {
@@ -298,7 +317,7 @@ table {
   line-height: 20px;
 }
 
-.category > link {
+.category link {
   text-decoration: none;
   color: #333333;
 }
@@ -326,7 +345,7 @@ table {
   color: #666;
   font-weight: 400;
   border: 1px solid #f7f7f6;
-  font-family: "Noto Sans";
+  outline: none;
 }
 .btn_side_search {
   position: absolute;
@@ -458,13 +477,14 @@ table {
 
 /*main page section_tit*/
 .section_tit {
+  display: inline-block;
   width: 100%;
   height: 146px;
   text-align: center;
   font-size: 28px;
   padding: 79px 0px 35px;
   color: #333333;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .section_tit2 {
@@ -473,10 +493,9 @@ table {
   font-size: 28px;
   padding: 79px 0 35px 0;
   color: #333333;
-  font-weight: 500;
+  font-weight: 700;
 }
-.section_tit2 > a {
-  font-size: 28px;
+.section_tit2 a {
   color: #333333;
   text-decoration: none;
 }
@@ -517,11 +536,10 @@ table {
   display: block;
   width: 100%;
   height: 320px;
-  background-image: url("https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg");
   background-size: cover;
 }
 
-.main_products > li > h3 {
+.main_products li h3 {
   margin: 12px 0 0;
   text-decoration: none;
   line-height: 23px;
@@ -535,17 +553,20 @@ table {
 }
 .main_product_info .price {
   font-size: 16px;
+  font-weight: 800;
+  display: block;
 }
 .main_product_info .dc {
   margin: 0 8px 0 0;
   color: #fa622f;
 }
-.main_product_info .origin_price {
+.origin_price {
   display: block;
   margin: 5px 0 0;
   font-size: 14px;
   text-decoration: line-through;
   color: #999999;
+  line-height: 18px;
 }
 .rec_prev {
   position: absolute;
@@ -558,7 +579,7 @@ table {
   right: 205px;
 }
 
-/*-----------today_sale section-------------*/
+/*-----------today_sale section-------------
 .today_sale_section {
   width: 100%;
   height: 639.8px;
@@ -625,6 +646,7 @@ table {
 .today_sale_products li h3 {
   padding: 14px 0 0 4px;
   line-height: 23px;
+  text-decoration: none;
 }
 .today_sale_products li h3 a {
   display: block;
@@ -647,7 +669,7 @@ table {
   padding: 0 0 0 4px;
   color: #999999;
   text-decoration: line-through;
-}
+}*/
 
 /*--------sale_section------------*/
 .sale_section {
@@ -692,10 +714,13 @@ table {
   height: 27.2px;
   margin: 17px 0 0;
   text-align: center;
+  font-weight: 700;
 }
-.sale_products_info_1 a {
+.sale_products_link {
   color: #333333;
   font-size: 18px;
+  text-decoration: none;
+  letter-spacing: -0.3px;
 }
 .sale_products_info_2 {
   display: block;
@@ -783,13 +808,13 @@ table {
   padding: 12px 20px 0 19px;
 }
 
-.category_md_list li :hover {
+.c_md_list:hover {
   background-color: #f7f3f8;
   color: #5f0080;
 }
 
-.category_md_list li :focus,
-.category_md_list li :active {
+.c_md_list :focus,
+.c_md_list :active {
   background-color: #5f0080;
   color: #f7f3f8;
 }

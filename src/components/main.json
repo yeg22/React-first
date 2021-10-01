@@ -1,0 +1,175 @@
+{
+    "mainProducts":[
+{
+    "id" : 1,
+    "url": "https://img-cf.kurly.com/shop/data/goods/1493087360483l0.jpg",
+    "name" : "[우리밀] 새우짱",
+    "dc" : "12%",
+    "price" : "1,400원",
+    "origin_price" : "1,600원"
+},
+{
+    "id" : 2,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터2",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원"
+},
+{
+    "id" : 3,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터3",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원"
+},
+{
+    "id" : 1,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터4",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원"
+},
+{
+    "id" : 1,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터5",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원"
+},
+{
+    "id" : 1,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터6",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원",
+    "des" : "에쉬레 버터의 풍미 그대로"
+},
+{
+    "id" : 1,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터7",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원",
+    "des" : "에쉬레 버터의 풍미 그대로"
+}
+],
+
+"cheapProducts":[
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap1",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 2,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap2",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap3",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap4",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap5",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap6",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    },
+    {
+        "id" : 1,
+        "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+        "name" : "cheap7",
+        "dc" : "10%",
+        "price" : "18,900원",
+        "origin_price" : "21,000원",
+        "des" : "에쉬레 버터의 풍미 그대로"
+    }
+    ],
+
+"sectionTit" : [
+    {
+        "id" : 1,
+        "section_tit": "이 상품 어때요?"
+    },
+    {
+        "id" : 2,
+        "section_tit": "특가/혜택"
+    },
+    {
+        "id" : 3,
+        "section_tit": "놓치면 후회할 가격"
+    },
+    {
+        "id" : 4,
+        "section_tit": "MD의 추천"
+    },
+    {
+        "id" : 5,
+        "section_tit": "지금 가장 핫한 상품"
+    },
+    {
+        "id" : 6,
+        "section_tit": "무거워진 몸, 다시 가볍게!"
+    },
+    {
+        "id" : 7,
+        "section_tit": "마감세일"
+    },
+    {
+        "id" : 8,
+        "section_tit": "365일 최저가 도전"
+    },
+    {
+        "id" : 9,
+        "section_tit": "식단관리"
+    },
+    {
+        "id" : 10,
+        "section_tit": "컬리의 레시피"
+    },
+    {
+        "id" : 11,
+        "section_tit": "인스타그램 고객 후기"
+    }
+  ]
+}
