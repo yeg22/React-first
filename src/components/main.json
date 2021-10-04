@@ -25,7 +25,7 @@
     "origin_price" : "21,000원"
 },
 {
-    "id" : 1,
+    "id" : 4,
     "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
     "name" : "json데이터4",
     "dc" : "10%",
@@ -33,7 +33,7 @@
     "origin_price" : "21,000원"
 },
 {
-    "id" : 1,
+    "id" : 5,
     "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
     "name" : "json데이터5",
     "dc" : "10%",
@@ -41,7 +41,7 @@
     "origin_price" : "21,000원"
 },
 {
-    "id" : 1,
+    "id" : 6,
     "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
     "name" : "json데이터6",
     "dc" : "10%",
@@ -50,7 +50,16 @@
     "des" : "에쉬레 버터의 풍미 그대로"
 },
 {
-    "id" : 1,
+    "id" : 7,
+    "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
+    "name" : "json데이터7",
+    "dc" : "10%",
+    "price" : "18,900원",
+    "origin_price" : "21,000원",
+    "des" : "에쉬레 버터의 풍미 그대로"
+},
+{
+    "id" : 8,
     "url": "https://img-cf.kurly.com/shop/data/goods/big/201511/385_shop1_556007.jpg",
     "name" : "json데이터7",
     "dc" : "10%",

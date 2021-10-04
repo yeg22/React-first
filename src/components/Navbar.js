@@ -5,26 +5,32 @@ import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 import styled from "styled-components";
 
 const StyledLink = styled(Link)`
+
     font-size: 16px;
     height: 100%;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration:none;
     color: #333333;
-    font-family: 'Noto Sans';
     letter-spacing: -0.3px;
     line-height: 20px;
+    border-bottom: 1px solid transparent;
+    font-family: "Noto Sans KR", sans-serif;
 
     &:focus, &:hover, &:visited, &:link, &:active {
         
     }
+
     &:hover{
-        
-        text-decoration:underline;
         color:#5f0080;
+        border-bottom-color: #5f0080;
     }
+
     &:focus{
         color:#5f0080;
     }
+
+
+    
 `;
 
 const Navbar  = () => {
@@ -39,10 +45,10 @@ const Navbar  = () => {
                                 <li></li>
                             </ul>
                         </li>
-                        <li className="category"><StyledLink to = "/NewProduct" className = "">신상품</StyledLink></li>
-                        <li className="category"><StyledLink to = "/Best">베스트</StyledLink></li>
-                        <li className="category"><StyledLink to = "/Smart">알뜰쇼핑</StyledLink></li>
-                        <li className="category"><StyledLink to = "/Sale">특가/혜택</StyledLink></li>
+                        <li className="category"><StyledLink to = "/NewProduct" className = "clink">신상품</StyledLink></li>
+                        <li className="category"><StyledLink to = "/Best" className = "clink">베스트</StyledLink></li>
+                        <li className="category"><StyledLink to = "/Smart" className = "clink">알뜰쇼핑</StyledLink></li>
+                        <li className="category"><StyledLink to = "/Sale" className = "clink">특가/혜택</StyledLink></li>
                     </ul>
                     <div className="gnb_side">
                         <form action="#" className="gnb_side_search">

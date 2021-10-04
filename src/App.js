@@ -13,8 +13,8 @@ import Best from "./components/Best";
 import Smart from "./components/Smart";
 import Sale from "./components/Sale";
 import Slide from "react-slick";
-import MainProduct from "./components/MainProduct";
-
+import MainSeciton from "./components/MainSection";
+import CustomArrows from "./components/CustomArrows";
 
 
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
@@ -22,8 +22,8 @@ import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 function App(){
 
   return (
-    <div className = "Apple">
-      <div className = "container">
+    
+    <BrowserRouter>
         <Header></Header>
         <Route exact path = "/"><Main></Main></Route>
         <Route exact path = "/Header"><Login></Login></Route>
@@ -33,8 +33,7 @@ function App(){
         <Route exact path = "/Sale"><Sale></Sale></Route>
         <Route exact path = "/Login"><Login></Login></Route>
         <Footer></Footer>
-      </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

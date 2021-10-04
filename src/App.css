@@ -147,7 +147,6 @@ table {
 #header {
   width: 100%;
   height: 156px;
-  /*color: #4c4c4c;*/
 }
 #header-wrap {
   width: 1050px;
@@ -156,21 +155,21 @@ table {
   padding: 9px 0 0;
   position: relative;
 }
+
 .usermenu {
   width: 100%;
   display: flex;
   justify-content: space-between;
   height: 37px;
+  z-index: 100;
 }
+
 .delivery_icon {
   height: 100%;
   width: 121px;
 }
 .delivery_icon a img {
   display: inline-block;
-  /*position: absolute;*/
-  /*left: -1px;*/
-  /*top: -28px;*/
   height: 22px;
   width: 121px;
   border: 0;
@@ -178,59 +177,28 @@ table {
 
 .user_menu {
   display: flex;
-  height: 37px;
-}
-.user_menu li {
-  padding: 0 12px;
-}
-.user_menu li:last-child {
-  padding-right: 0;
-}
-.loginlink {
   font-size: 12px;
-  font-weight: 400;
-  color: #333333;
-  text-decoration: none;
-  letter-spacing: -0.3px;
-}
-.joinlink {
-  font-size: 12px;
-  font-weight: 400;
-  color: #5f0080;
-  text-decoration: none;
-  letter-spacing: -0.3px;
-}
-.sclink {
-  font-size: 12px;
-  font-weight: 400;
-  color: #333333;
-  text-decoration: none;
-  letter-spacing: -0.3px;
 }
 
 .bar {
   width: 1px;
   height: 13px;
-  background-color: #d8d8d8;
-}
-
-.service_center_item {
-  /*display: flex;*/
-  position: relative;
+  padding: 0 4px 0 3px;
 }
 
 .service_center_icon {
   width: 18px;
   height: 18px;
-  /*background-image: url(./images/down.webp);*/
+  background: transparent;
+  background-image: url(./down.webp);
   background-repeat: no-repeat;
   background-position: center center;
   border: none;
 }
 
 .service_center_detail {
-  display: hidden;
-  width: 100%;
+  width: 100px;
+  padding: 8px;
   background-color: #fff;
   border: 1px solid #ddd;
   position: absolute;
@@ -240,20 +208,17 @@ table {
 }
 
 .service_center_detail li {
-  display: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+}
+.service_center_detail li:last-child {
+  margin-bottom: 0;
 }
 
 .scd {
-  display: hidden;
   text-decoration: none;
   font-weight: 400;
   color: #4c4c4c;
   font-size: 12px;
-}
-
-.service_center_detail li:last-child {
-  margin-bottom: 0;
 }
 
 #logo {
@@ -273,17 +238,18 @@ table {
 #gnb {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 56px;
   position: absolute;
   top: 100px;
   left: 0;
+  width: 1050px;
 }
 .gnb_menu {
+  width: 60%;
+  justify-content: space-between;
   display: flex;
-  height: 55px;
   font-size: 14px;
   color: #333333;
+  margin-right: 72px;
 }
 
 .all_category {
@@ -317,15 +283,10 @@ table {
   line-height: 20px;
 }
 
-.category link {
-  text-decoration: none;
-  color: #333333;
-}
-
 .gnb_side {
-  width: 35%;
+  width: 40%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .gnb_side_search {
@@ -342,10 +303,12 @@ table {
   background-color: #f7f7f7;
   font-size: 12px;
   border: none;
-  color: #666;
   font-weight: 400;
   border: 1px solid #f7f7f6;
   outline: none;
+}
+.side_search_bar::placeholder {
+  color: #b1aeae7a;
 }
 .btn_side_search {
   position: absolute;
@@ -361,6 +324,7 @@ table {
   background-position: center center;
   background-size: 35px 35px;
   border: none;
+  background-color: transparent;
 }
 .gnb_side_cart {
   width: 35px;
@@ -370,6 +334,12 @@ table {
   background-position: center center;
   background-size: 35px 35px;
   border: none;
+  background-color: transparent;
+}
+
+.gnb_side_location:hover,
+.gnb_side_cart:hover {
+  color: #5f0080;
 }
 /*gnb_sub*/
 .gnb_sub {
@@ -683,9 +653,11 @@ table {
   width: 30px;
   height: 30px;
   border: none;
-  background-image: url("https://res.kurly.com/pc/service/main/1908/ico_title_link_x1.png");
+  background-image: url(./title_arrow.webp);
   background-repeat: no-repeat;
   background-size: 30px 30px;
+  background-color: transparent;
+  cursor: pointer;
 }
 .sale_wrap {
   margin: 0 auto;
@@ -1214,4 +1186,43 @@ table {
   padding: 1px 0 0;
   justify-content: center;
   line-height: 16px;
+}
+
+/* 퀵메뉴 quick-menu */
+.quick-menu {
+  width: 80px;
+  margin-right: 20px;
+  position: absolute;
+  top: 526px;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 50;
+}
+
+.quick-notice-image {
+  width: 80px;
+  margin-bottom: 4px;
+}
+
+.imagelink img {
+  width: 100%;
+}
+
+.quick-items {
+  background-color: #fff;
+  border-top: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  font-size: 12px;
+  text-align: center;
+}
+
+.quick-items li {
+  height: 29px;
+  line-height: 29px;
+  border-bottom: 1px solid #cccccc;
+}
+.quicklink {
+  text-decoration: none;
+  color: #333333;
 }

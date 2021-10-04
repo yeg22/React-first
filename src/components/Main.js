@@ -4,11 +4,13 @@ import React from 'react';
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
 
 import Slide from './Slide';
-
+import Sbanner from './Sbanner';
 import Section from './Section';
+
 import ProductList from './ProductList';
 
-import MainProduct from "./MainProduct"
+import MainSection from "./MainSection"
+import CustomArrows from "./CustomArrows";
 
 import Dummy from "./main.json" //임의로 main.json파일에 데이터 저장 (section_tit)
 
@@ -31,9 +33,11 @@ class Main extends React.Component {
 
       render(){
     return(
+        
 
         <div id="main">
 
+            <Sbanner/>
             <section className = "slide">
                 <Slide></Slide>
                 <div className="slide-button">
@@ -47,15 +51,16 @@ class Main extends React.Component {
                 <div className = "section_tit">
                     {Dummy.sectionTit[0].section_tit}
                 </div>
+                
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <MainProduct></MainProduct>
+                    <CustomArrows></CustomArrows>
                     </ul>
                 </div>
-                <div className ="slide_button">
+                {/* <div className ="slide_button">
                     <a href="#" className = "rec_prev"><img src = "https://res.kurly.com/pc/service/main/1908/btn_prev_default.png?v=1"></img></a>
                     <a href="#" className = "rec_next"><img src = "https://res.kurly.com/pc/service/main/1908/btn_next_default.png?v=1"></img></a>
-        </div>
+                </div> */}
             </section>{/*<!--recommendation-section-->*/}
 
             <section className="sale_section">
@@ -101,58 +106,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "cheap_products_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "cheap_products_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "cheap_products_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "cheap_products_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -222,58 +176,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "now_hot_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "now_hot_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "now_hot_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "now_hot_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -290,58 +193,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "think_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "think_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "think_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "think_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -358,58 +210,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "last_sale_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "last_sale_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "last_sale_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "last_sale_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -427,58 +228,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "low_365_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "low_365_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "low_365_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "low_365_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -496,58 +246,7 @@ class Main extends React.Component {
                 </div>
                 <div className = "product_slide">
                     <ul className="main_products">
-                        <li>
-                            <a href="#" className = "home_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "home_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "home_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" className = "home_img"></a>
-                            <h3><a href="#">[LOTS OF LOVE] 손맛듬뿍 새우볶음밥</a></h3>
-                            <div className = "main_product_info">
-                                <div className = "price">
-                                    <span className = "dc">15%</span>
-                                        5,780원
-                                </div>
-                                <span className = "origin_price">
-                                    6,800원
-                                </span>
-                            </div>
-                        </li>
+                        <MainSection></MainSection>
                     </ul>
                 </div>
                 <div className="slide_button">
@@ -613,7 +312,7 @@ class Main extends React.Component {
                 <div className = "insta_more_link">
                     <div className = "insta_more_link_wrap">
                         <span className = "insta_more_a">더 많은 고객 후기가 궁금하다면?</span>
-                        <span className = "insta_more_id">@marketkurly_regram</span>
+                        <span className = "insta_more_id" onClick={() => window.open('[https://www.instagram.com/marketkurly_regram/]', '_blank')}>@marketkurly_regram</span>
                     </div>
                 </div>
                 <div className="slide_button">

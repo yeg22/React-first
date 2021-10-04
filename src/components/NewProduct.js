@@ -7,48 +7,7 @@ import Pagination from './Pagination';
 import Post from './Post';
 import axios from 'axios';
 
-/*const products = [
-    {
-        'id' : 1,
-        'image' : '#',
-        'name' : '[아티제] 에쉬레 롤케이크1',
-        'dc' : '10%',
-        'price' : '18,900원',
-        'origin_price' : '21,000원',
-        'des' : '에쉬레 버터의 풍미 그대로'
-    },
-    {
-        'id' : 2,
-        'image' : '#',
-        'name' : '[프로마제 다피누아] 쁘띠 더블 크림치즈',
-        'dc' : '',
-        'price' : '10,900원',
-        'origin_price' : '',
-        'des' : '고소한 맛과 부드러운 질감'
-    },
-    {
-        'id' : 3,
-        'img' : '#',
-        'name' : '[아티제] 에쉬레 롤케이크3',
-        'dc' : '10%',
-        'price' : '18,900원',
-        'origin_price' : '21,000원',
-        'des' : 'dfd'
-        
-    },
-    {
-        'id' : 4,
-        'img' : '#',
-        'name' : '[아티제] 에쉬레 롤케이크4',
-        'dc' : '10%',
-        'price' : '18,900원',
-        'origin_price' : '21,000원',
-        'des' : 'dfd'
-        
-    }
-
-]*/
-
+import Tit_Sub from './Tit_Sub';
 
 function NewProduct(){
     
@@ -80,11 +39,10 @@ function NewProduct(){
         
         <div className = "content">
 
-            <div className =  "tit_article">
-                <h2>신상품</h2>
-            </div>{/*<!--tit_article-->*/}
+            <Tit_Sub />
 
             <div className = "page_article">
+
                 <div className = "sort_menu">
                     <span className = "count_product">총 {posts.length}건</span>
                     <ul className = "sort_select">
@@ -101,9 +59,8 @@ function NewProduct(){
                         <li><a href = "#">높은 가격순</a></li>
                     </ul>
                 </div>{/*<!--sort_menu-->*/}
-                <div className = "list_product_wrap">
-                    
 
+                <div className = "list_product_wrap">
                         {/*{ 이 js에서 위에 const products(배열로)해주고, ProductList에 props로 전달해 줄 때 했었음 (json, axios 아니라 그냥 값 전달)
                             products.map(c => {
                                 return(
@@ -126,6 +83,9 @@ function NewProduct(){
                             paginate = {paginate}>
                         </Pagination>
                 </div>{/*<!--list_product_wrap-->*/}
+
+
+                
             </div>{/*<!--page_article-->*/}
 
             

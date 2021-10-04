@@ -31,15 +31,15 @@ function Header(){
                         <li className="user_join_item">
                             <Link to = "/Join" className = "joinlink">회원가입</Link>
                         </li>
-                        <span className = "bar"></span>
+                        {/*<span className = "bar"></span>*/}
                         <li className="user_login_item">
                             <Link to = "/Login" className = "loginlink">로그인</Link>
                         </li>
-                        <span className = "bar"></span>
+                        {/*<span className = "bar"></span>*/}
                         <li className="service_center_item">
                             <Link to = "/ServiceCenter" className = "sclink">고객센터</Link>
                             <button type="button" className="service_center_icon"></button>
-                            {/*
+                            
                             <ul className="service_center_detail">
                                 <li><Link to  ="#" className = "scd">공지사항</Link></li>
                                 <li><Link to ="#" className = "scd">자주하는 질문</Link></li>
@@ -47,7 +47,7 @@ function Header(){
                                 <li><Link to ="#" className = "scd">대량주문 문의</Link></li>
                                 <li><Link to ="#" className = "scd">상품제안</Link></li>
                                 <li><Link to ="#" className = "scd">에코포장 피드백</Link></li>
-                            </ul>*/}
+                            </ul>
                         </li>
                     </ul>
 
