@@ -28,9 +28,9 @@ function NewProduct(){
         }, []);
       
         // Get current posts
-        const indexOfLastPost = currentPage * postsPerPage;
-        const indexOfFirstPost = indexOfLastPost - postsPerPage;
-        const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+        const indexOfLastPost = currentPage * postsPerPage; //마지막 포스트 인덱스 = 현재 페이지 번호 * 한페이지 당 보여줄 포스트 개수 
+        const indexOfFirstPost = indexOfLastPost - postsPerPage; //첫번째 포스트 인덱스 = 마지막 포스트 인덱스 - 한페이지 당 보여줄 포스트 개수 
+        const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost); //현재 페이지 포스트들 = 포스트 slice 첫번째 포스트 ~ 마지막 포스트(인덱스 0부터 시작) 
       
         // Change page
         const paginate = pageNumber => setCurrentPage(pageNumber);

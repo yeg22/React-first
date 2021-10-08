@@ -15,6 +15,7 @@ import Sale from "./components/Sale";
 import Slide from "react-slick";
 import MainSeciton from "./components/MainSection";
 import CustomArrows from "./components/CustomArrows";
+import SignUp from "./components/SignUp/SignUp";
 
 
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom';
@@ -32,6 +33,7 @@ function App(){
         <Route exact path = "/Smart"><Smart></Smart></Route>
         <Route exact path = "/Sale"><Sale></Sale></Route>
         <Route exact path = "/Login"><Login></Login></Route>
+        <Route exact path = "/SignUp"><SignUp /></Route>
         <Footer></Footer>
     </BrowserRouter>
   );

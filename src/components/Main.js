@@ -105,12 +105,9 @@ class Main extends React.Component {
                     </a>
                 </div>
                 <div className = "product_slide">
-                    <ul className="main_products">
+                    <div className="main_products">
                         <MainSection></MainSection>
-                    </ul>
-                </div>
-                <div className="slide_button">
-                    <a href="#" className = "cheap_next"><img src = "https://res.kurly.com/pc/service/main/1908/btn_next_default.png?v=1"></img></a>
+                    </div>
                 </div>
             </section>{/*<!--cheap_section-->*/}
 

@@ -10,11 +10,23 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+import PrevArrow from './PrevArrow';
+import NextArrow from './NextArrow';
+
 const SlideBox = styled.div`
         overflow:hidden;
         width: 1050px;
         height: 506px;
         margin: 0 auto;
+        .slick-prev:before {
+          opaicty: 1; // 기존에 숨어있던 화살표 버튼이 보이게
+          color: black; // 버튼 색은 검은색으로
+          left: 0;
+        }
+        .slick-next:before {
+          opacity: 1;
+          color: black;
+        }
         
       `;
       
@@ -42,34 +54,13 @@ const SlideBox = styled.div`
       
       `;
 
-      function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-          />
-        );
-      }
-      
-      function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-          />
-        );
-      }
 
 class MainSection extends React.Component{
 
 
     render(){
         const settings = {
-            dots: true,
+            dots: false,
             speed: 100,
             slidesToShow: 4,
             slidesToScroll: 4,
@@ -78,24 +69,22 @@ class MainSection extends React.Component{
             pauseOnHover : true,
             draggable : false,
             speed : 700,
-            nextArrow: <SampleNextArrow />,
-            prevArrow: <SamplePrevArrow />
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />,
           };
 
           return (
+
             <SlideBox>
-              <StyledSlider ref={c => (this.slider = c)} {...settings}
-              >
+              <StyledSlider ref={c => (this.slider = c)} {...settings}>
+
                 {Dummy.mainProducts.map((mainProduct) => ( 
-                  
 
-                  <li key={mainProduct.id}>
-
+                  <div key={mainProduct.id}>
                     <ImageContainer>
                       <Image src={mainProduct.url} />
                     </ImageContainer>
-
-                      <li> 
+                      <div> 
                         <h3><Link to ="#">{mainProduct.name}</Link></h3>
                         <div className = "main_product_info">
                           <div className = "price">
@@ -106,16 +95,12 @@ class MainSection extends React.Component{
                             {mainProduct.origin_price}
                           </span>
                         </div>
-                      </li>
-                  </li>
-                  )
+                      </div>
+                  </div>
+
+                )
 
                 )}
-                <div className ="slide_button">
-                    <button className = "button" onclick = {this.previous}>previous</button>
-                    <button className = "button" onclick = {this.next}>next</button>
-                    {/*<a href="#" className = ".slick-next"><img src = "https://res.kurly.com/pc/service/main/1908/btn_next_default.png?v=1"></img></a>*/}
-                </div>
               </StyledSlider>
               
             </SlideBox>

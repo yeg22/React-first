@@ -330,3 +330,72 @@ table {
   padding-bottom: 10px;
   width: 100%;
 }
+
+/*Sign up----------------------*/
+.wrapper {
+  margin: 0 auto;
+  width: 10;
+  width: 1050px;
+}
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-wrapper h1 {
+  display: block;
+  color: #333333;
+  font-size: 28px;
+  padding: 50px 0 51px;
+}
+.plus {
+  color: #666666;
+  font-size: 12px;
+  width: 640px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333333;
+  text-align: right;
+}
+.essential {
+  font-size: 12px;
+  color: #ee6a7b;
+  padding: 0 2px 0 0;
+}
+.signform {
+  width: 640px;
+  float: left;
+}
+.signform label {
+}
+.form-wrapper h1 {
+}
+.sign_input {
+  width: 332px;
+  height: 44px;
+  padding: 0 14px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.sign_input:focus {
+  border: 1px solid #333;
+}
+.sign_input:placehorder {
+  font-size: 14px;
+}
+.double_check {
+  margin: 0 0 0 5px;
+  font-size: 14px;
+  color: #5f0080;
+  border: 1px solid #5f0080;
+  width: 120px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.errorMessage {
+  display: block;
+  width: 481px;
+  float: right;
+  padding: 10px 0 9px 0;
+}

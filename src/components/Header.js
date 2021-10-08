@@ -29,7 +29,7 @@ function Header(){
 
                     <ul className = "user_menu">
                         <li className="user_join_item">
-                            <Link to = "/Join" className = "joinlink">회원가입</Link>
+                            <Link to = "/SignUp" className = "joinlink">회원가입</Link>
                         </li>
                         {/*<span className = "bar"></span>*/}
                         <li className="user_login_item">
